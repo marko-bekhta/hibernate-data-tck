@@ -6,7 +6,7 @@
 <module name="jakarta.data.api" xmlns="urn:jboss:module:1.9">
 
     <resources>
-        <resource-root path="jakarta.data-api-1.0.0.jar"/>
+        <resource-root path="jakarta.data-api-1.1.0-SNAPSHOT.jar"/>
     </resources>
 
     <dependencies>

@@ -29,10 +29,10 @@
         <maven.surefire.plugin.version>3.2.5</maven.surefire.plugin.version>
 
         <arquillian.version>1.8.0.Final</arquillian.version>
-        <jakarta.data.version>1.0.0</jakarta.data.version>
+        <jakarta.data.version>1.1.0-SNAPSHOT</jakarta.data.version>
         <junit.version>5.10.2</junit.version>
         <sigtest.version>2.3</sigtest.version>
-        <hibernate.data.version>6.6.6.Final</hibernate.data.version>
+        <hibernate.data.version>8.0.0-SNAPSHOT</hibernate.data.version>
         <weld.version>5.1.2.Final</weld.version>
         <weld-junit.version>4.0.2.Final</weld-junit.version>
         <h2.version>2.1.214</h2.version>
@@ -76,6 +76,11 @@
         <dependency>
             <groupId>jakarta.data</groupId>
             <artifactId>jakarta.data-api</artifactId>
+            <version>${jakarta.data.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.data</groupId>
+            <artifactId>jakarta.data.stateful-api</artifactId>
             <version>${jakarta.data.version}</version>
         </dependency>
         <!-- TODO add your implementation of the Jakarta Data API -->
@@ -195,7 +200,7 @@
                             <type>jar</type>
                             <overWrite>false</overWrite>
                             <outputDirectory>target/wildfly/modules/system/layers/base/jakarta/data/api/main</outputDirectory>
-                            <destFileName>jakarta.data-api-1.0.0.jar</destFileName>
+                            <destFileName>jakarta.data-api-1.1.0-SNAPSHOT.jar</destFileName>
                         </artifactItem>
                         <artifactItem>
                             <groupId>org.hibernate</groupId>

@@ -30,13 +30,13 @@
         <maven.surefire.plugin.version>3.2.5</maven.surefire.plugin.version>
 
         <arquillian.version>1.9.2.Final</arquillian.version>
-        <jakarta.data.version>1.0.0</jakarta.data.version>
-        <jakarta.data.tck.version>1.0.0</jakarta.data.tck.version>
+        <jakarta.data.version>1.1.0-SNAPSHOT</jakarta.data.version>
+        <jakarta.data.tck.version>1.1.0-SNAPSHOT</jakarta.data.tck.version>
         <jakarta.transaction.version>2.0.1</jakarta.transaction.version>
         <junit.version>5.9.0</junit.version>
         <cdi.version>4.1.0</cdi.version>
         <servlet.version>6.0.0</servlet.version>
-        <hibernate.data.version>6.6.6.Final</hibernate.data.version>
+        <hibernate.data.version>8.0.0-SNAPSHOT</hibernate.data.version>
     </properties>
 
     <!-- The Junit5 test frameworks -->
@@ -129,7 +129,7 @@
         <dependency>
             <groupId>jakarta.validation</groupId>
             <artifactId>jakarta.validation-api</artifactId>
-            <version>3.1.0-M2</version>
+            <version>4.0.0-M1</version>
         </dependency>
         <dependency>
             <groupId>jakarta.transaction</groupId>
@@ -140,7 +140,7 @@
         <dependency>
             <groupId>jakarta.persistence</groupId>
             <artifactId>jakarta.persistence-api</artifactId>
-            <version>3.1.0</version>
+            <version>4.0.0-M4</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -149,8 +149,13 @@
             <version>${jakarta.data.version}</version>
         </dependency>
         <dependency>
+            <groupId>jakarta.data</groupId>
+            <artifactId>jakarta.data.stateful-api</artifactId>
+            <version>${jakarta.data.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.hibernate.orm</groupId>
-            <artifactId>hibernate-jpamodelgen</artifactId>
+            <artifactId>hibernate-processor</artifactId>
             <version>${hibernate.data.version}</version>
         </dependency>
     </dependencies>
@@ -188,7 +193,7 @@
                             <includeArtifactIds>jakarta.data-tck</includeArtifactIds>
                             <includeClassifiers>sources</includeClassifiers>
                             <excludeTransitive>true</excludeTransitive>
-                            <excludes>**/_AsciiChar.java,**/_AsciiCharacter.java</excludes>
+                            <excludes>**/_AsciiChar.java,**/_AsciiCharacter.java,**/async/**</excludes>
                             <failOnMissingClassifierArtifact>true</failOnMissingClassifierArtifact>
                             <outputDirectory>${project.build.directory}/tck-sources</outputDirectory>
                             <overWriteSnapshots>true</overWriteSnapshots>
@@ -204,6 +209,7 @@
                     <compilerArgs>
                         <arg>-parameters</arg>
                         <arg>-XprintRounds</arg>
+                        <arg>-AjakartaDataSortCompliance=true</arg>
                     </compilerArgs>
                     <compileSourceRoots>
                         <compileSourceRoot>${project.basedir}/src/main/java</compileSourceRoot>
@@ -212,6 +218,28 @@
                     </compileSourceRoots>
                     <generatedSourcesDirectory>${project.build.directory}/tck-tool-sources</generatedSourcesDirectory>
                     <release>17</release>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>jakarta.data</groupId>
+                            <artifactId>jakarta.data-tools</artifactId>
+                            <version>${jakarta.data.version}</version>
+                        </path>
+                        <path>
+                            <groupId>org.hibernate.orm</groupId>
+                            <artifactId>hibernate-processor</artifactId>
+                            <version>${hibernate.data.version}</version>
+                        </path>
+                        <path>
+                            <groupId>jakarta.data</groupId>
+                            <artifactId>jakarta.data-api</artifactId>
+                            <version>${jakarta.data.version}</version>
+                        </path>
+                        <path>
+                            <groupId>jakarta.data</groupId>
+                            <artifactId>jakarta.data.stateful-api</artifactId>
+                            <version>${jakarta.data.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
                 </configuration>
             </plugin>
             <plugin>

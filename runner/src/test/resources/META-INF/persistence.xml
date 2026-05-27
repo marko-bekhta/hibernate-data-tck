@@ -4,7 +4,7 @@
              xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence
              https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
 
-    <persistence-unit name="jakarta-data-tck">
+    <persistence-unit name="jakarta-data-tck" transaction-type="JTA">
         <description>Hibernate Entity Manager for Jakarta Data TCK</description>
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
@@ -14,6 +14,32 @@
         <class>ee.jakarta.tck.data.standalone.entity.Coordinate</class>
         <class>ee.jakarta.tck.data.web.validation.Rectangle</class>
         <class>ee.jakarta.tck.data.standalone.persistence.Product</class>
+        <class>ee.jakarta.tck.data.framework.read.only._AsciiCharacters</class>
+        <class>ee.jakarta.tck.data.framework.read.only._CustomRepository</class>
+        <class>ee.jakarta.tck.data.framework.read.only._NaturalNumbers</class>
+        <class>ee.jakarta.tck.data.framework.read.only._PositiveIntegers</class>
+        <class>ee.jakarta.tck.data.standalone.entity._Boxes</class>
+        <class>ee.jakarta.tck.data.standalone.entity._MultipleEntityRepo</class>
+        <class>ee.jakarta.tck.data.standalone.persistence.stateless._Catalog</class>
+        <class>ee.jakarta.tck.data.standalone.persistence.stateful._Inventory</class>
+        <class>ee.jakarta.tck.data.standalone.persistence.stateful._Products</class>
+
+        <class>ee.jakarta.tck.data.framework.read.only.AsciiCharacters</class>
+        <class>ee.jakarta.tck.data.framework.read.only.CustomRepository</class>
+        <class>ee.jakarta.tck.data.framework.read.only.NaturalNumbers</class>
+        <class>ee.jakarta.tck.data.framework.read.only.PositiveIntegers</class>
+        <class>ee.jakarta.tck.data.standalone.entity.Boxes</class>
+        <class>ee.jakarta.tck.data.standalone.entity.MultipleEntityRepo</class>
+        <class>ee.jakarta.tck.data.standalone.persistence.stateless.Catalog</class>
+        <class>ee.jakarta.tck.data.standalone.persistence.stateful.Inventory</class>
+        <class>ee.jakarta.tck.data.standalone.persistence.stateful.Products</class>
+
+        <class>ee.jakarta.tck.data.framework.read.only.AsciiCharacters$</class>
+        <class>ee.jakarta.tck.data.framework.read.only.CustomRepository$</class>
+        <class>ee.jakarta.tck.data.framework.read.only.NaturalNumbers$</class>
+        <class>ee.jakarta.tck.data.framework.read.only.PositiveIntegers$</class>
+        <class>ee.jakarta.tck.data.standalone.persistence.stateless.Catalog$</class>
+
 
         <properties>
             <property name="jakarta.persistence.jdbc.url"

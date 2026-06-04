@@ -15,7 +15,7 @@
         <class>ee.jakarta.tck.data.web.validation.Rectangle</class>
         <class>ee.jakarta.tck.data.standalone.persistence.Product</class>
         <class>ee.jakarta.tck.data.framework.read.only._AsciiCharacters</class>
-        <class>ee.jakarta.tck.data.framework.read.only._CustomRepository</class>
+        <class>ee.jakarta.tck.data.framework.read.only.qbmn._CustomRepository</class>
         <class>ee.jakarta.tck.data.framework.read.only._NaturalNumbers</class>
         <class>ee.jakarta.tck.data.framework.read.only._PositiveIntegers</class>
         <class>ee.jakarta.tck.data.standalone.entity._Boxes</class>
@@ -25,7 +25,7 @@
         <class>ee.jakarta.tck.data.standalone.persistence.stateful._Products</class>
 
         <class>ee.jakarta.tck.data.framework.read.only.AsciiCharacters</class>
-        <class>ee.jakarta.tck.data.framework.read.only.CustomRepository</class>
+        <class>ee.jakarta.tck.data.framework.read.only.qbmn.CustomRepository</class>
         <class>ee.jakarta.tck.data.framework.read.only.NaturalNumbers</class>
         <class>ee.jakarta.tck.data.framework.read.only.PositiveIntegers</class>
         <class>ee.jakarta.tck.data.standalone.entity.Boxes</class>
@@ -34,12 +34,23 @@
         <class>ee.jakarta.tck.data.standalone.persistence.stateful.Inventory</class>
         <class>ee.jakarta.tck.data.standalone.persistence.stateful.Products</class>
 
-        <class>ee.jakarta.tck.data.framework.read.only.AsciiCharacters$</class>
-        <class>ee.jakarta.tck.data.framework.read.only.CustomRepository$</class>
-        <class>ee.jakarta.tck.data.framework.read.only.NaturalNumbers$</class>
-        <class>ee.jakarta.tck.data.framework.read.only.PositiveIntegers$</class>
-        <class>ee.jakarta.tck.data.standalone.persistence.stateless.Catalog$</class>
+        <class>ee.jakarta.tck.data.framework.read.only.qbmn.AsciiCharactersByName$</class>
+        <class>ee.jakarta.tck.data.framework.read.only.qbmn.CustomRepository$</class>
+        <class>ee.jakarta.tck.data.framework.read.only.qbmn.NaturalNumbersByName$</class>
+        <class>ee.jakarta.tck.data.framework.read.only.qbmn.PositiveIntegersByName$</class>
 
+        <class>ee.jakarta.tck.data.standalone.entity.Vegetable</class>
+        <class>ee.jakarta.tck.data.framework.read.only.Fruit</class>
+        <class>ee.jakarta.tck.data.framework.read.only.Country</class>
+
+        <class>ee.jakarta.tck.data.framework.read.only._Countries</class>
+        <class>ee.jakarta.tck.data.framework.read.only.Countries</class>
+        <class>ee.jakarta.tck.data.framework.read.only._FruitRepository</class>
+        <class>ee.jakarta.tck.data.framework.read.only.FruitRepository</class>
+        <class>ee.jakarta.tck.data.standalone.entity._VegetableRepository</class>
+        <class>ee.jakarta.tck.data.standalone.entity.VegetableRepository</class>
+
+        <class>ee.jakarta.tck.data.web.async.Account</class>
 
         <properties>
             <property name="jakarta.persistence.jdbc.url"

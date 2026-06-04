@@ -11,7 +11,8 @@ import java.util.HashMap;
 @ApplicationScoped
 public class EntityManagerFactoryProducer {
 
-    @Produces @ApplicationScoped
+    @Produces
+    @ApplicationScoped
     public SessionFactory createEntityManagerFactory(BeanManager beanManager) {
         HashMap<String, Object> properties = new HashMap<>();
         System.out.println("BeanManager: " + beanManager);
@@ -19,7 +20,7 @@ public class EntityManagerFactoryProducer {
         properties.put("javax.persistence.bean.manager", beanManager);
         SessionFactory sessionFactory
                 = Persistence.createEntityManagerFactory("jakarta-data-tck", properties)
-                        .unwrap(SessionFactory.class);
+                .unwrap(SessionFactory.class);
         return sessionFactory;
     }
 }

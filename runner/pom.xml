@@ -34,7 +34,7 @@
         <junit.version>5.9.0</junit.version>
         <sigtest.version>2.3</sigtest.version>
         <hibernate.data.version>8.0.0-SNAPSHOT</hibernate.data.version>
-        <weld-junit.version>4.0.2.Final</weld-junit.version>
+        <weld-junit.version>5.0.4-SNAPSHOT</weld-junit.version>
         <h2.version>2.1.214</h2.version>
         <narayana-jta.version>7.3.4.Final</narayana-jta.version>
     </properties>
@@ -73,6 +73,12 @@
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-data-tck-tests</artifactId>
             <version>1.0</version>
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <groupId>jakarta.enterprise</groupId>-->
+<!--                    <artifactId>jakarta.enterprise.cdi-api</artifactId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
         </dependency>
 
         <!-- The API -->

@@ -122,9 +122,14 @@
             <version>6.1.0-M2</version>
         </dependency>
         <dependency>
-            <groupId>jakarta.enterprise</groupId>
-            <artifactId>jakarta.enterprise.cdi-api</artifactId>
-            <version>4.1.0.RC1</version>
+            <groupId>jakarta.concurrency</groupId>
+            <artifactId>jakarta.concurrency-api</artifactId>
+            <version>3.2.0-M2</version>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.cdi</groupId>
+            <artifactId>jakarta.cdi-api</artifactId>
+            <version>5.0.0.Beta1</version>
         </dependency>
         <dependency>
             <groupId>jakarta.validation</groupId>
@@ -193,7 +198,7 @@
                             <includeArtifactIds>jakarta.data-tck</includeArtifactIds>
                             <includeClassifiers>sources</includeClassifiers>
                             <excludeTransitive>true</excludeTransitive>
-                            <excludes>**/_AsciiChar.java,**/_AsciiCharacter.java,**/async/**</excludes>
+                            <excludes>**/_AsciiChar.java,**/_AsciiCharacter.java</excludes>
                             <failOnMissingClassifierArtifact>true</failOnMissingClassifierArtifact>
                             <outputDirectory>${project.build.directory}/tck-sources</outputDirectory>
                             <overWriteSnapshots>true</overWriteSnapshots>
